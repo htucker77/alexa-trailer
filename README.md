@@ -1,7 +1,6 @@
-# announce-my-presence
+# Alexa-Trailer
 
-AWS Lambda function for the [Announce My Presence](https://www.amazon.com/dp/B078N3WBQN) Alexa skill
-
+AWS Lambda function for Alexa skill 'What Dwells in my trailer?'
 ## Requirements
 
 * Python 3
