@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     if os.environ['DEBUG'] == "true":
         print("lambda_handler event=" + json.dumps(event))
     
-    app_id = os.environ['APP_ID']
+    app_id = os.environ['amzn1.ask.skill.06670f7e-54d6-4af8-a197-0f1880e2777d']
     
     if event['session']['application']['applicationId'] != app_id:
         raise ValueError("Invalid Application ID")
@@ -64,7 +64,7 @@ def on_launch(launch_request, session):
     return play()      
     
 def play():
-    fanfare_url = os.environ['FANFARE_URL']
+    fanfare_url = os.environ['/trailer2.mp3']
     
     return {
         'version': '1.0',
@@ -76,7 +76,7 @@ def play():
                     "audioItem": {
                         "stream": {
                             "token": "12345",
-                            "url": f"{fanfare_url}",
+                            "url": "{fanfare_url}",
                             "offsetInMilliseconds": 0
                         }
                     }
